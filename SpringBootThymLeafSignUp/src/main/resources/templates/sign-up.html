@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html   xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title > sign up  </title>
+</head>
+gjfdngfkb
+<body>
+	<form action="#" th:action = @{/sign-up} th:object = ${signUpForm}   method="post">
+	
+	<table>
+	
+	 <tr>
+	 	<td><label >Enter First Name : </label></td>
+	 	<td><input type="text" name="FirstName"></input></td> 
+     </tr>
+     <tr>
+		<td><label>Enter Last Name :</label></td>
+		<td><input type="text" name="LastName"></input></td>
+	 </tr>
+	 <tr>
+	 <td></td><td><input type= "submit" value="Submit" /></td>
+	 </tr>
+	</table>
+	</form>
+</body>
+</html>
