@@ -23,6 +23,7 @@ public class firstBootApp {
 	DataSourceUtil ds=context.getBean(DataSourceUtil.class);
 	
 	System.out.println(ds.getUrl() + "   " +ds.getUsername());
+	System.out.println(" First Demo ");
 	
 		
 	}
