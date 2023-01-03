@@ -2,7 +2,7 @@ package com.Dao;
 
 import com.exception.demo.TooOldException;
 
-public class TooOldProcess {
+public class TooOldProcessDao {
 
 	
 private Integer age;
@@ -11,11 +11,8 @@ private Integer age;
 		
 		this.age=age;
 		
-		if(age<21) {
+		if(age<30) {
 			throw new TooOldException("no chance");
-		}
-		else {
-			System.out.println("chance is there");
 		}
 		
 	}

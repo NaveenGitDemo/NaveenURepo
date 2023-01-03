@@ -21,6 +21,10 @@ public class ArmStrong {
 		System.out.println("no is armstrong");
 		else
 			System.out.println("not");
+	
+		
+		
 	}
+      
 
 }

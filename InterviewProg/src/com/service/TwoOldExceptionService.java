@@ -1,6 +1,6 @@
 package com.service;
 
-import com.Dao.TooOldProcess;
+import com.Dao.TooOldProcessDao;
 import com.exception.demo.TooOldException;
 
 public class TwoOldExceptionService {
@@ -9,7 +9,7 @@ public class TwoOldExceptionService {
 	
 	public void getAge(Integer age)throws TooOldException {
 		
-		TooOldProcess t=new TooOldProcess();
+		TooOldProcessDao t=new TooOldProcessDao();
 		
 		t.getAge(age);
 		

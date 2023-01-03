@@ -19,12 +19,11 @@ class MyThread extends Thread{
 			
 			System.out.println("child thread");
 			
-//			try {
-//				th.join();   // child thread calling join method on main thread object reference 
-//			} catch (InterruptedException e1) {
-//				// TODO Auto-generated catch block
-//				e1.printStackTrace();
-//			}
+			/*
+			 * try { th.join(); // child thread calling join method on main thread object
+			 * reference } catch (InterruptedException e1) { // TODO Auto-generated catch
+			 * block e1.printStackTrace(); }
+			 */
 //			
 			
 			try {

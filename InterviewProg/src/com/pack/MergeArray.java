@@ -6,7 +6,9 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 public class MergeArray {
 
@@ -67,12 +69,16 @@ public class MergeArray {
 			 
 		 }
 		 
+		  //m.entrySet().stream().fi
 		 System.out.println("count of duplicate char :"+m);
 		 
 		 Map<String,Integer> mymap=new HashMap<>();
-		 mymap.put("naveen", 1);
-		 mymap.put("naveen", 2);
-		 
+		 System.out.println(mymap.put("naveen", 1));
+		 System.out.println("dup "+mymap.put("naveen", 2));
+    List<Entry<String,Integer>>	ll	= mymap.entrySet().stream().filter( entry -> entry.getValue().equals(2)).collect(Collectors.toList());
+
+          System.out.println(" list Entry : "+ll.get(0).getValue());
+
 		 System.out.println("duplicate key value is :" +mymap.get("naveen"));
 		 
 		 ArrayList<Integer> l=new ArrayList<Integer>();
@@ -81,6 +87,8 @@ public class MergeArray {
 		 l.add(10);
 		 l.add(30);
 		 
+		 List<Integer> evenlist=l.stream().filter( even -> even%2==0 ).collect(Collectors.toList());
+		 evenlist.forEach(le -> System.out.println("even list of data : "+le));
 		 Set<Integer> removedup=new HashSet<Integer>(l);
 		 
 		 System.out.println(removedup);
@@ -88,6 +96,11 @@ public class MergeArray {
 	//	 l.addAll(removedup);
 		 
 	//	 System.out.println(l);
+		 Integer [] number= {110,220,120,440};
+		    List<Integer> integerList=Arrays.asList(number);
+		List<String>    liststartwithone=integerList.stream().map( intlist -> intlist+" ").filter(intlist -> intlist.startsWith("1")).collect(Collectors.toList());
+		
+		System.out.println(" Starts with one :  "+liststartwithone);
 		 
 		 int a=13;
 		 int no=a;
@@ -136,6 +149,20 @@ public class MergeArray {
 				 }
 				 
 		m1.forEach((k,v) -> System.out.println(k + " : " +v));
+		
+		// checking boolean value for the list
+		List<String> list1=new ArrayList<>();
+		list1.add("Krishn");
+		list1.add("Radha");
+		System.out.println("size of list 1 "+list1.size()+" list1 value is "+list1);
+		// second list
+		List<String> list2=new ArrayList<>();
+		System.out.println("size of list 2 "+list2.size()+" list2 value is "+list2);
+		
+		// boolean value 
+		boolean flag1=list1.removeAll(list2);
+		System.out.println(" boolean flag value is "+flag1);
+		
 
 	}
 

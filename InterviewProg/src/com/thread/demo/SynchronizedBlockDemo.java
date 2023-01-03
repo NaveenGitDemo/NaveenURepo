@@ -2,7 +2,7 @@ package com.thread.demo;
 
 class Display1{
 	
-	public void wish(String name) {
+	public void wish(String name) throws InterruptedException {
 		
 		System.out.println(" one lakh line of code ");
 		
@@ -10,14 +10,13 @@ class Display1{
 		for(int i=1;i<=10;i++) 
 		{
 			System.out.print(" Good Morning : ");
-			try{
+			
 			Thread.sleep(2000);
 			System.out.println(name);
-			}catch(InterruptedException e) {}
 			
 		}
-		}
 	}
+}
 }
 
 class MyThread2 extends Thread{
@@ -30,7 +29,12 @@ class MyThread2 extends Thread{
 		this.name=name;
 	}
 	public void run() {
-		d.wish(name);
+		try {
+			d.wish(name);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }
 
@@ -48,6 +52,7 @@ public class SynchronizedBlockDemo {
 		MyThread2 mt1=new MyThread2(d, "Krishn");
 		mt.start();
 		mt1.start();
+		mt.start();
 		
 	}
 

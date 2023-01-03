@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -19,6 +20,9 @@ public class ComparoterTest {
 		list.add(6);
 		list.add(9);
 		list.add(2);
+		
+		LinkedList<String>  l=new LinkedList<>();
+		
 		
 		Comparator<Integer> c= (i1,i2) -> {return (i1>i2)?-1:(i1<i2)?1:0 ;};
 		

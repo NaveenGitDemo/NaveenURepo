@@ -58,6 +58,28 @@ public class FindDuplicateInList {
 		
 		m.entrySet().forEach(entry -> {System.out.println(entry.getKey());});
 		
+		
+		for(Map.Entry<Character,Integer> entry :  m.entrySet() ) {
+			if(m.containsKey('a')) {
+				System.out.println(entry.getKey() + "  :  " +  entry.getValue());
+			}
+		}
+		
+		// reverse a string
+		// convert charater in string 
+		char ch []= {'a','b','c','d'};
+		
+		    String charString=null;
+		    
+		       String s=String.valueOf(ch);
+		    	
+		    	//String s= new String(ch);
+		    	
+		    	
+		  
+		
+		System.out.println(" character string value  " +s);
+		
 		//Second largest number
 		int count = 1;
 		int arr[] = {1,2,5,9};
